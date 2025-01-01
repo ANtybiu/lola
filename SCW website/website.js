@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const counter = entry.target;
       const target = +counter.getAttribute('data-target');
       console.log(target)
-      let speed = 150; // Adjust speed as needed
+      let speed = 150;
       let time = 20;
       if (target > 200) {
         time = 20
@@ -19,16 +19,15 @@ document.addEventListener("DOMContentLoaded", () => {
         counter.style.opacity = `1`;
         document.getElementById('plusNums').style.transition = `opacity 1s`;
         document.getElementById('plusNums').style.opacity = `1`;
-        // Count up when in view
         const countUp = () => {
           const current = +counter.innerText;
           const increment = Math.ceil(target / speed);
 
           if (current < target) {
             counter.innerText = current + increment;
-            setTimeout(countUp, time); // Adjust for smoothness
+            setTimeout(countUp, time);
           } else {
-            counter.innerText = target; // Ensure exact final value
+            counter.innerText = target;
           }
         };
 
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
         counter.style.opacity = `0`;
         document.getElementById('plusNums').style.transition = ``;
         document.getElementById('plusNums').style.opacity = `0`;
-        // Reset to 0 when out of view
         counter.innerText = '0';
       }
     });
