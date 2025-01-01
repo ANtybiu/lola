@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'MyFont'; /* Choose a name for the font */
-  src: url('/BAHNSCHRIFT.TTF') format('truetype');
+  src: url('BAHNSCHRIFT.TTF') format('truetype');
   font-weight: normal; /* Specify the font weight */
   font-style: normal;  /* Specify the font style */
 }
 @font-face {
   font-family: 'LogoFont'; /* Choose a name for the font */
-  src: url('/ariblk.TTF') format('truetype');
+  src: url('ariblk.TTF') format('truetype');
   font-weight: normal; /* Specify the font weight */
   font-style: normal;  /* Specify the font style */
 }
