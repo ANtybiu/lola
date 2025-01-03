@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/png" href="scwlogo.png" sizes="64x64">
+    <style>
+      @font-face {
+  font-family: 'MyFont'; /* Choose a name for the font */
+  src: url('BAHNSCHRIFT.TTF') format('truetype');
+  font-weight: normal; /* Specify the font weight */
+  font-style: normal;  /* Specify the font style */
+}
+@font-face {
+  font-family: 'LogoFont'; /* Choose a name for the font */
+  src: url('ariblk.ttf') format('truetype');
+  font-weight: normal; /* Specify the font weight */
+  font-style: normal;  /* Specify the font style */
+}
+      #header-logo{
+  font-family: 'LogoFont' ;
+  font-weight: bold;
+  color: rgb(255,192,0);
+  font-size: 60px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+#logo-hyperlink{
+  color: rgb(255,192,0);
+  text-decoration: none;
+}
+#header{
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 10983434;
+}
+.header-options{
+  color:white;
+  font-family: 'MyFont';
+  font-size: 22px;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+.header-options:hover{
+  opacity: 0.9;
+}
+.header-options:after{
+  content: ''; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.3s,right 0.3s ; 
+}
+.header-options:hover::after{
+  width: 100%;
+  right:0;
+}
+.header-options:not(:hover)::after{
+  width: 0;
+  right: 100%;
+}
+#header-options-container{
+  display:flex;
+  gap: 50px;
+  align-items: center;
+  padding-right: 100px;
+}
+#contactUs{
+  margin-left:15px;
+  border: none;
+  background-color: rgb(255,192,0);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom:5px;
+  border-radius: 5px;
+  font-family: 'MyFont';
+  font-size: 22px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s,color 0.2s;
+}
+#contactUs:hover{
+  background-color: white;
+  color: rgb(255,192,0);
+}
+#contactUs:active{
+  opacity: 0.9
+}
+#introduction{
+  background-color: black;
+  width: 97.5vw;
+  height: 450px;
+  margin-left: 0;
+}
+body{
+  margin-top:85px;
+  background-color: black;
+}
+#body{
+  text-align: left;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+#introduction-text{
+  font-family: 'MyFont';
+  color:white;
+  font-weight: bold;
+  font-size: 48px;
+  padding-top: 125px;
+  width:600px;
+  padding-left: 25px;
+}
+#introduction-sub{
+  color: rgb(130,119,119);
+  font-family: 'MyFont';
+  padding-left: 25px;
+  margin-top: 10px;
+}
+#main-about-us{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 97.5vw;
+  background-color: rgb(235,235,235);
+  
+}
+#about-us-title{
+  text-align: center;
+  font-family: 'MyFont';
+  font-weight: bold;
+  font-size: 36px;
+  padding-top: 15px;
+}
+.q{
+  color:rgb(255,192,0);
+}
+#gem{
+color: rgb(255,192,0);
+}
+#about-us-text{
+  margin-left: 25px;
+  font-family: 'MyFont';
+  margin-top: 50px;
+  width: 600px;
+}
+#we-are-{
+  font-size: 32px;
+  font-weight: bold;
+}
+#about-SCW{
+  font-family: 'LogoFont';
+  font-size: 34px;
+  padding-top: 2.5px;
+  color: rgb(255,192,0)
+}
+#about-us{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  background-color: rgb(235,235,235);
+}
+#david{
+  padding-right: 50px;
+  padding-top: 50px;
+}
+#david-text{
+  font-family: 'MyFont';
+  color: gray;
+  text-align: center;
+}
+#david-img{
+  margin-left: 75px;
+  box-sizing: border-box;
+}
+#history{
+  width: 97.5vw;
+  height: 500px;
+  background-color: rgb(245,245,245);
+  display: flex;
+  font-family:'MyFont';
+  padding-top: 50px;
+  flex-direction: column;
+}
+#history-title{
+  margin-left: 25px;
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom:50px;
+}
+#history-timeline{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 75px;
+  gap: 30px;
+}
+.history-box{
+  width: 250px;
+  height: 300px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+  background-color: white;
+  cursor: pointer;
+  border: 0px solid white;
+  transition: border 0.2s, background-color 0.1s;
+  box-sizing: border-box;
+}
+.history-box:hover{
+  border: 5px solid white;
+  background-color: rgb(240,240,240);
+}
+.history-image{
+  height: 35%;
+  width: 100%;
+  background-color: #FF6F00;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 42px;
+  font-weight: bold
+}
+.history-title{
+  font-weight: bold;
+  margin-top: 10px;
+  margin-left: 10px;
+  font-size: 24px;
+  text-decoration: underline;
+  background-color: rgb(255,192,0);
+  display: flex;
+  width: max-content;
+  margin-bottom: 10px;
+  padding-right: 20px;
+}
+.history-description{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.abu{
+  text-decoration: none;
+  color:white
+}
+#introduction-words{
+  opacity: 0;
+  margin-left: 50px;
+  transition: opacity 1s,margin-left 0.5s;
+}
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-logo"><a href="html.html" id="logo-hyperlink">SCW</a></div>
+      <div id="header-options-container">
+        <div class="header-options">About Us</div>
+        <div class="header-options">Branches</div>
+        <div class="header-options"><a class="abu" href="html.html#numbers-2">Services</a></div>
+        <div class="header-options">Careers</div>
+        <button id="contactUs">Contact Us</button>
+      </div>
+    </div>
+    <div id="body">
+      <div id="introduction">
+        <div id="introduction-words">
+          <div id="introduction-text"><span class="q">"</span>This World Is Changing... <span id="gem">We</span> Decide Into What.<span class="q">"</span></div>
+          <div id="introduction-sub"><i>Founder of SCW, David Seah Cheong Wei</i></div>
+        </div>
+      </div>
+      <div id="main-about-us">
+        <div id="about-us-title">About Us (content not finalized)</div>
+        <div id="about-us">
+          <div id="about-us-text">
+            <span id="we-are-">We are <span id="about-SCW">SCW</span></span><br>
+            Our goal is to empower businesses and individuals by providing dependable, comprehensive, and innovative financial and business solutions.<br><br>
+            <span style="padding-top: 10px;">
+              With over 25 years of experience, We specialize in accounting, auditing, tax, advisory and secretarial services, making us a trusted partner for our clients.
+            </span>
+            
+            </div>
+          <div id="david"><img src="david.jpg" width="128px" id="david-img"><br><span id="david-text"><i>Founder of SCW, David Seah Cheong Wei</i></span></div>
+        </div>
+        <div id="history">
+          <div id="history-title">The history of SCW</div>
+          <div id="history-timeline">
+            <div class="history-box">
+              <div class="history-image">2000</div>
+              <div class="history-title">SCW Founding </div>
+              <div class="history-description">SCW's origins can be traced back to here. The original SCW offices were located in an old, dusty shop lot at Bandar Puteri Puchong.</div>
+            </div>
+
+            <div class="history-box">
+              <div class="history-image">2007</div>
+              <div class="history-title">Audit License </div>
+              <div class="history-description">SCW can now offer Auditing and Tax services after receiving the long awaited auditing license from MIA.</div>
+            </div>
+
+            <div class="history-box">
+              <div class="history-image">2012</div>
+              <div class="history-title">Relocation </div>
+              <div class="history-description">SCW relocated it's offices to the 5th floor of Setiawalk block F-9.</div>
+            </div>
+
+            <div class="history-box">
+              <div class="history-image">2019</div>
+              <div class="history-title">HQ Relocation</div>
+              <div class="history-description">Founder Seah Cheong Wei relocated the company's HQ to a new branch at 3Elements Seri Kembangan while the Setiawalk branch remained in operation</div>
+            </div>
+
+            <div class="history-box">
+              <div class="history-image">2025</div>
+              <div class="history-title">Today </div>
+              <div class="history-description">SCW is now 25 years old and has 247 total clients and partners.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const serviceBoxes = document.querySelectorAll('.history-box');
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.style.transition = `opacity 1s,margin-top 0.5s ,border 0.1s `;
+              entry.target.style.opacity = `1`;
+              entry.target.style.marginTop = `0`;
+          }else{
+            entry.target.style.transition = ``;
+              entry.target.style.opacity = `0`;
+              entry.target.style.marginTop = `50px`;
+          }
+      });
+  }, {
+      threshold: 0
+  });
+
+  serviceBoxes.forEach(box => observer.observe(box));
+});
+let lolz = false;
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceBoxes = document.getElementById('introduction-words');
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            lolz = true;
+              entry.target.style.transition = `opacity 1s,margin-left 0.5s ,border 0.1s `;
+              entry.target.style.opacity = `1`;
+              entry.target.style.marginLeft = `0`;
+          }else{
+            entry.target.style.transition = ``;
+              entry.target.style.opacity = `0`;
+              entry.target.style.marginLeft = `50px`;
+          }
+      });
+  }, {
+      threshold: 0
+  });
+
+observer.observe(serviceBoxes)
+});
+    </script>
+  </body>
+</html>
