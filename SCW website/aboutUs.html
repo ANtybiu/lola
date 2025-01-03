@@ -355,13 +355,13 @@ document.addEventListener("DOMContentLoaded", () => {
       entries.forEach(entry => {
           if (entry.isIntersecting) {
             lolz = true;
-              entry.target.style.transition = `opacity 1s,margin-left 0.5s ,border 0.1s `;
+              entry.target.style.transition = `opacity 1s,margin-left 1s ,border 0.1s `;
               entry.target.style.opacity = `1`;
               entry.target.style.marginLeft = `0`;
           }else{
             entry.target.style.transition = ``;
               entry.target.style.opacity = `0`;
-              entry.target.style.marginLeft = `50px`;
+              entry.target.style.marginLeft = `100px`;
           }
       });
   }, {
