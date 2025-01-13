@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <!--
+    Welcome to SCW Web Developmental Tools :),
+
+      SCW.
+      Author: Seah Zhihen @ ANtybiu.
+      Version 1.
+      Last Modified: 7/1/2025.
+      URL: https://scwaudit.com
+    -->
+  <head>
+    <link rel="stylesheet" href="website.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="as.png" sizes="64x64">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-logo"><a href="index.html" id="logo-hyperlink">SCW</a></div>
+      <div id="header-options-container">
+        <div class="header-options"><a class="abu" href="aboutUs.html" target="_self">About Us</a></div>
+        <div class="header-options"><a class="abu" href="branches.html">Branches</a></div>
+        <div class="header-options"><a href="#numbers-2" class="abu">Services</a></div>
+        <div class="header-options"><a class="abu" href="jobs.html">Careers</a></div>
+        <button id="contactUs" onclick="openEM()">Contact Us</button>
+      </div>
+      <div id="hamburger-menu">
+        <div id="hamburger-icon" onclick="toggleHamburger()">☰</div>
+        <div id="hamburger-options">
+          <div class="header-options"><a class="abu" href="aboutUs.html" target="_self">About Us</a></div>
+          <div class="header-options"><a class="abu" href="branches.html">Branches</a></div>
+          <div class="header-options"><a href="#numbers-2" class="abu">Services</a></div>
+          <div class="header-options"><a class="abu" href="jobs.html">Careers</a></div>
+          <button id="contactUs" onclick="openEM()">Contact Us</button>
+        </div>
+        </div>
+    </div>
+    <div id="body">
+      <div id="introduction">
+        <div id="introduction-text">
+          <span class="ss">"S</span>ustain the
+          <span class="ss">C</span>hanging
+          <span class="ss">W</span>orld<span class="ss">"</span>
+        </div>
+        <a href="#numbers-2" class="abu"><button id="introduction-button">Explore more</button></a>
+      </div>
+      <div id="stats">
+        <div id="numbers">
+          <div id="numbers-1"><span id="number1" class="nums counter" data-target="220">0</span><br>Total Clients on all services combined</div>
+          <div id="numbers-2"><span id="number2" class="nums counter" data-target="15">0</span><span class="nums" id="plusNums">+</span><br>Years of experience</div>
+        </div>
+        <div id="services">
+          <div id="services-title"><span id="services-title-main">Services</span><span id="services-title-sub">Professional Services by SCW & Associates</span></div>
+          <div id="services-list">
+            <div class="services-box" id="s1" class="services-count">
+              <div class="services-image" id="i1"></div>
+              <div class="services-name">Audit<br> & Assurance</div>
+              
+            </div>
+
+            <div class="services-box" id="s2" class="services-count">
+              <div class="services-image" id="i2"></div>
+              <div class="services-name">Advisory</div><br><br>
+              <div class="sub-services-container">
+                <div class="sub-services">- Financial Planning</div>
+                <div class="sub-services">- Merger & Acquisition Advisory</div>
+                <div class="sub-services">- Loan & Finance Advisory</div>
+                <div class="sub-services">- Consultancy & Training</div>
+                <div class="sub-services">- Property Investment Advisory</div>
+              </div>
+            </div>
+
+            <div class="services-box" id="s3" class="services-count">
+              <div class="services-image" id="i3"></div>
+              <div class="services-name" width="100px">Secretarial Services</div>
+              <div class="sub-services-container">
+                <div class="sub-services">- New formation of company/LLP</div>
+                <div class="sub-services">- Strike-off/ wind up company</div>
+              </div>
+            </div>
+
+            <div class="services-box" id="s4" class="services-count">
+              <div class="services-image" id="i4"></div>
+              <div class="services-name">Taxation</div>
+              <div class="sub-services-container">
+                <div class="sub-services">- Tax Compliance</div>
+                <div class="sub-services">- Tax Consulting and Advisory</div>
+                <div class="sub-services">- Tax Risk Management</div>
+              </div>
+            </div>
+
+            <div class="services-box" id="s5" class="services-count">
+              <div class="services-image" id="i5"></div>
+              <div class="services-name">Accounting</div>
+            </div>
+          </div>
+          <div id="stories">
+            <div id="stories-title">Get to know more about <span id="stories-logo">SCW</span>.</div>
+            <div id="stories-list">
+              <div id="about-us" class="stories-box" onclick="window.open('aboutUs.html', '_self');">
+                <div class="stories-image"></div>
+                <div class="stories-name">About Us</div>
+                <div class="stories-description">Explore the history, work culture and purpose of SCW</div>
+                <div class="stories-button"><button class="SlmB">Learn More</button></div>
+              </div>
+
+              <div id="about-us" class="stories-box" onclick="window.open('jobs.html', '_self')">
+                <div class="stories-image"></div>
+                <div class="stories-name">Careers</div>
+                <div class="stories-description">Search for job vacancies that are suitable for you</div>
+                <div class="stories-button"><button class="SlmB">Learn More</button></div>
+              </div>
+
+              <div id="about-us" class="stories-box" onclick="window.open('branches.html','_self')">
+                <div class="stories-image"></div>
+                <div class="stories-name">Branches</div>
+                <div class="stories-description">Discover our locations closest to you</div>
+                <div class="stories-button"><button class="SlmB">Learn More</button></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="website.js"></script>
+  </body>
+</html>

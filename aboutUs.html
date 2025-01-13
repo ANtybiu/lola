@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" type="image/png" href="as.png" sizes="64x64">
+    <style>
+      @font-face {
+  font-family: 'MyFont'; /* Choose a name for the font */
+  src: url('BAHNSCHRIFT.TTF') format('truetype');
+  font-weight: normal; /* Specify the font weight */
+  font-style: normal;  /* Specify the font style */
+}
+@font-face {
+  font-family: 'LogoFont'; /* Choose a name for the font */
+  src: url('ariblk.ttf') format('truetype');
+  font-weight: normal; /* Specify the font weight */
+  font-style: normal;  /* Specify the font style */
+}
+html{
+  font-size: 0.15vw;
+}
+:root {
+    --base-height: 1vh;
+}
+#header-logo{
+  font-family: 'LogoFont' ;
+  font-weight: bold;
+  color: rgb(255,192,0);
+  font-size: 30rem;
+  margin-left: 25rem;
+  cursor: pointer;
+}
+#logo-hyperlink{
+  color: rgb(255,192,0);
+  text-decoration: none;
+}
+#header{
+  width: 102vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top:0;
+  left:0;
+  z-index: 10983434;
+}
+.header-options{
+  color:white;
+  font-family: 'MyFont';
+  font-size: 11rem;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+.header-options:hover{
+  opacity: 0.9;
+}
+.header-options:after{
+  content: ''; 
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0.2vh;
+  background-color: currentColor;
+  transition: width 0.3s,right 0.3s ; 
+}
+.header-options:hover::after{
+  width: 100%;
+  right:0;
+}
+.header-options:not(:hover)::after{
+  width: 0;
+  right: 100%;
+}
+#header-options-container{
+  display:flex;
+  gap: 25rem;
+  align-items: center;
+  padding-right: 50rem;
+}
+#contactUs{
+  margin-left:7.5rem;
+  border: none;
+  background-color: rgb(255,192,0);
+  padding-left: 7.5rem;
+  padding-right: 7.5rem;
+  padding-top: 1vh;
+  padding-bottom:1vh;
+  border-radius: 2.5rem;
+  font-family: 'MyFont';
+  font-size: 11rem;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s,color 0.2s;
+}
+#contactUs:hover{
+  background-color: white;
+  color: rgb(255,192,0);
+}
+#contactUs:active{
+  opacity: 0.9
+}
+.abu{
+  text-decoration: none;
+  color:white
+}
+#introduction{
+  width: 97.5vw;
+  height: calc(var(--base-height)*76);
+  background-image: url('branches-introBG.jpg');
+  background-clip: content-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size:cover;
+}
+body{
+  margin-top:15vh;
+  background-color: black;
+}
+#body{
+  text-align: left;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5px;
+}
+#introduction-text{
+  color:white;
+  font-family: 'MyFont';
+  font-size: 25rem;
+  font-weight: bold;
+  margin-left: 100px;
+  opacity: 0;
+  transition: opacity 1s,margin-left 1s;
+  text-align: center;
+}
+#introduction-sub{
+  color: rgb(130,119,119);
+  font-family: 'MyFont';
+  padding-left: 10rem;
+  margin-top: 1vh;
+  font-size: 7.5rem;
+}
+#main-about-us{
+  display: flex;
+  flex-direction: column;
+  height: 25vh;
+  width: 97.5vw;
+  background-color: rgb(235,235,235);
+  
+}
+#about-us-title{
+  text-align: center;
+  font-family: 'MyFont';
+  font-weight: bold;
+  font-size: 10rem;
+  padding-top: 4rem;
+}
+.q{
+  color:rgb(255,192,0);
+  font-family: 'LogoFont'
+}
+#gem{
+color: rgb(255,192,0);
+}
+#about-us-text{
+  font-size: 7.5rem;
+  margin-left: 10rem;
+  font-family: 'MyFont';
+  margin-top: 5vh;
+  width: 100%;
+}
+#we-are-{
+  font-size: 20rem;
+  font-weight: bold;
+  padding-bottom: 25px;
+  display: block;
+  text-align: center;
+}
+#about-SCW{
+  font-family: 'LogoFont';
+  font-size: 22rem;
+  padding-top: 0.5vh;
+  color: rgb(255,192,0)
+}
+#about-us{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1vh;
+  background-color: rgb(235,235,235);
+}
+#history{
+  width: 97.5vw;
+  height: max-content;
+  background-color: rgb(245,245,245);
+  display: flex;
+  font-family:'MyFont';
+  padding-top: 10vh;
+  flex-direction: column;
+}
+#history-title{
+  margin-left: 10rem;
+  font-weight: bold;
+  font-size: 17.5rem;
+  padding-bottom:10rem;
+}
+#history-timeline{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 25rem;
+  padding-right: 25rem;
+  padding-bottom: 15vh;
+  padding-top: 5vh;
+  gap: 15rem;
+}
+.history-box{
+  width: 125rem;
+  height: max-content;
+  min-height: 50vh;
+  border-radius: 10rem;
+  box-shadow: 0px 0px 4rem rgba(0,0,0,0.5);
+  background-color: white;
+  border: 0px solid white;
+  transition: border 0.2s, background-color 0.1s;
+  box-sizing: border-box;
+}
+.history-box:hover{
+  border: 2.5rem solid white;
+  background-color: rgb(240,240,240);
+}
+.history-image{
+  height: 17.5vh;
+  width: 100%;
+  background-color: #FF6F00;
+  border-top-left-radius: 10rem;
+  border-top-right-radius: 10rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rem;
+  font-weight: bold
+}
+.history-title{
+  font-weight: bold;
+  margin-top: 1.5vh;
+  margin-left: 3.5rem;
+  font-size: 12rem;
+  text-decoration: underline;
+  background-color: rgb(255,192,0);
+  display: flex;
+  width: max-content;
+  margin-bottom: 1.5vh;
+  padding-right: 10rem;
+}
+.history-description{
+  font-size: 7rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+.abu{
+  text-decoration: none;
+  color:white
+}
+#introduction-words{
+  opacity: 0;
+  margin-left: 10vw;
+  transition: opacity 1s,margin-left 0.5s;
+}
+#hamburger-menu{
+  display: none;
+  color: white;
+  margin-right: 25rem;
+  text-align: right;
+  margin-top: 10rem;
+}
+#hamburger-icon{
+  font-size: 15rem;
+  cursor: pointer;
+}
+#hamburger-icon:hover{
+  opacity: 0.9;
+}
+#hamburger-options{
+  display: none;
+  position: fixed;
+  height: 100vh;
+  width: max-content;
+  flex-direction: column;
+  right:0;
+  padding-right: 0rem;
+  gap: 10rem;
+  padding-top: 20rem;
+  transition: padding-right 0.2s,opacity,0.2s;
+  opacity: 0;
+  background-color: black;
+  padding-left: 5rem;
+}
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+@media(max-width: 1024px){
+  html{
+    font-size: 0.3vw;
+  }
+  #introduction{
+    width: 100vw;
+  }
+  #introduction-text{
+    width:241rem;
+  }
+  #main-about-us{
+    width: 100vw;
+  }
+  #history{
+    width:100vw;
+  }
+  #history-timeline{
+    flex-wrap:wrap;
+    gap: 25rem;
+  }
+  .history-box{
+  width: 100%;
+  height: max-content;
+  min-height: 50vh;
+  border-radius: 10rem;
+  box-shadow: 0px 0px 4rem rgba(0,0,0,0.5);
+  background-color: white;
+  cursor: pointer;
+  border: 0px solid white;
+  transition: border 0.2s, background-color 0.1s;
+  box-sizing: border-box;
+  max-width: 100%; 
+}
+
+  #history{
+    height: 1000vh;
+  }
+  .history-description{
+  font-size: 10rem;
+}
+  .history-title{
+    font-size: 18rem;
+  }
+  .history-image{
+    font-size: 22.5rem;
+  }
+}
+@media(max-width: 424px) and (max-height: 916px){
+  html{
+    font-size: 0.40vw;
+  }
+  .header-options{
+    font-size: 13rem;
+  }
+  #hamburger-options{
+    padding-right: 10rem;
+  }
+  .history-box{
+  width: 47.5%;
+  height: max-content;
+  min-height: 27.5vh;
+  border-radius: 10rem;
+  box-shadow: 0px 0px 4rem rgba(0,0,0,0.5);
+  background-color: white;
+  cursor: pointer;
+  border: 0px solid white;
+  transition: border 0.2s, background-color 0.1s;
+  box-sizing: border-box;
+  max-width: 100%; 
+}
+.history-image{
+  height: 10vh;
+  width: 100%;
+  background-color: #FF6F00;
+  border-top-left-radius: 10rem;
+  border-top-right-radius: 10rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18rem;
+  font-weight: bold
+}
+.history-title{
+  font-weight: bold;
+  margin-top: 1.5vh;
+  margin-left: 3.5rem;
+  font-size: 12.5rem;
+  text-decoration: underline;
+  background-color: rgb(255,192,0);
+  display: flex;
+  width: max-content;
+  margin-bottom: 1.5vh;
+  padding-right: 10rem;
+}
+.history-description{
+  font-size: 7.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+#history-timeline{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-left: 25rem;
+  padding-right: 25rem;
+  padding-bottom: 15vh;
+  padding-top: 5vh;
+  gap: 10rem;
+}
+  #header{
+    width: 102vw;
+  }
+  :root{
+    --base-height: 01vh;
+  }
+  #introduction{
+    font-size: 22rem;
+  }
+  #hamburger-menu{
+    display: block;
+  }
+  #header-options-container{
+    display:none;
+  }
+}
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div id="header">
+      <div id="header-logo"><a href="index.html" id="logo-hyperlink">SCW</a></div>
+      <div id="header-options-container">
+        <div class="header-options">About Us</div>
+        <div class="header-options"><a class="abu" href="branches.html">Branches</a></div>
+        <div class="header-options"><a class="abu" href="index.html#numbers-2">Services</a></div>
+        <div class="header-options"><a class="abu" href="jobs.html">Careers</a></div>
+        <button id="contactUs" onclick="openEM()">Contact Us</button>
+      </div>
+      <div id="hamburger-menu">
+        <div id="hamburger-icon" onclick="toggleHamburger()">☰</div>
+        <div id="hamburger-options">
+          <div class="header-options"><a class="abu" href="aboutUs.html" target="_self">About Us</a></div>
+          <div class="header-options"><a class="abu" href="branches.html">Branches</a></div>
+          <div class="header-options"><a href="index.html#numbers-2" class="abu">Services</a></div>
+          <div class="header-options"><a class="abu" href="jobs.html">Careers</a></div>
+          <button id="contactUs" onclick="openEM()">Contact Us</button>
+        </div>
+        </div>
+    </div>
+    <div id="body">
+      <div id="introduction">
+        <div id="introduction-text">More about us</div>
+      </div>
+      <div id="main-about-us">
+        <div id="about-us">
+          <div id="about-us-text">
+            <span id="we-are-">We are <span id="about-SCW">SCW.</span></span>
+            At SCW, we aim to empower both businesses and individuals by offering reliable, comprehensive, and innovative financial solutions. Our expertise spans accounting, auditing, tax, advisory, and secretarial services, positioning us as a trusted partner for our clients as they navigate the complexities of today’s financial and regulatory environment.<br><br>
+
+            Our mission is to provide exceptional service that is tailored to the unique needs of each client. Whether you need a true and fair financial report, compliance with tax laws, strategic business advice, or efficient corporate secretarial management, SCW is here to help with professionalism and integrity.<br><br>
+
+            Central to our philosophy is a dedication to excellence, transparency, and the development of lasting relationships. We believe in empowering our clients to reach their goals while nurturing a culture of trust and collaboration.
+            
+            </div>
+          <div id="david"></div>
+        </div>
+        <div id="history">
+          <div id="history-title">The history of SCW</div>
+          <div id="history-timeline">
+
+            <div class="history-box">
+              <div class="history-image">2007</div>
+              <div class="history-title">SCW Founding </div>
+              <div class="history-description">After receiving an auditing license from MIA & other regulating bodies, SCW was founded in Pusat Bandar Puchong</div>
+            </div>
+
+            <div class="history-box">
+              <div class="history-image">2012</div>
+              <div class="history-title">Relocation </div>
+              <div class="history-description">SCW relocated it's offices to the 5th floor of Setiawalk block F-9.</div>
+            </div>
+
+            <div class="history-box">
+              <div class="history-image">2019</div>
+              <div class="history-title">HQ Relocation</div>
+              <div class="history-description">Founder Seah Cheong Wei relocated the company's HQ to 3Elements Seri Kembangan.</div>
+            </div>
+
+            <div class="history-box">
+              <div class="history-image">Present</div>
+              <div class="history-title">Today </div>
+              <div class="history-description">SCW is now 18 years old and has 220 total clients throughout all services combined</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const serviceBoxes = document.querySelectorAll('.history-box');
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.style.transition = `opacity 1s,margin-top 0.5s ,border 0.1s `;
+              entry.target.style.opacity = `1`;
+              entry.target.style.marginTop = `0`;
+          }else{
+            entry.target.style.transition = ``;
+              entry.target.style.opacity = `0`;
+              entry.target.style.marginTop = `10vh`;
+          }
+      });
+  }, {
+      threshold: 0
+  });
+
+  serviceBoxes.forEach(box => observer.observe(box));
+});
+let lolz = false;
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceBoxes = document.getElementById('introduction-words');
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            lolz = true;
+              entry.target.style.transition = `opacity 1s,margin-left 1s ,border 0.1s `;
+              entry.target.style.opacity = `1`;
+              entry.target.style.marginLeft = `0`;
+          }
+      });
+  }, {
+      threshold: 0
+  });
+
+observer.observe(serviceBoxes)
+});
+let triggered;
+let hamburger = false;
+function toggleHamburger() {
+  const options = document.getElementById('hamburger-options');
+  if (hamburger) {
+    hamburger = false;
+    triggered = true;
+
+    // Smoothly hide the menu
+    options.style.opacity = '0';
+    options.style.paddingRight = '0';
+    options.style.transition = 'padding-right 0.2s ease, opacity 0.2s ease';
+
+    setTimeout(() => {
+      triggered = false;
+      options.style.display = 'none'; // Hide after animation
+    }, 210);
+  } else {
+    hamburger = true;
+
+    // Show the menu
+    options.style.display = 'flex'; // Make it visible immediately
+    setTimeout(() => {
+      // Apply transition properties *after* setting display
+      options.style.transition = 'padding-right 0.2s ease, opacity 0.2s ease';
+      options.style.opacity = '1';
+      options.style.paddingRight = '15rem';
+    }, 10); // Delay to ensure transition is applied
+  }
+}
+let deviceType = 'pc';
+function openEM(type){
+  if(deviceType === 'pc'){
+  window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=scw_co@yahoo.com`);
+  }else{
+    window.location.href = "mailto:scw_co@yahoo.com";
+  }
+}
+function isMobile() {
+  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
+if (isMobile()) {
+  deviceType = 'mobile'
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const serviceBoxes = document.getElementById('introduction-text');
+  const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.style.transition = `opacity 1s,margin-left 1s ,border 0.1s `;
+              entry.target.style.opacity = `1`;
+              entry.target.style.marginLeft = `0`;
+          }else{
+            entry.target.style.transition = ``;
+              entry.target.style.opacity = `0`;
+              entry.target.style.marginLeft = `100rem`;
+          }
+      });
+  }, {
+      threshold: 0.1
+  });
+
+observer.observe(serviceBoxes)
+});
+    </script>
+  </body>
+</html>
