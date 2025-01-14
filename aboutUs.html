@@ -420,16 +420,17 @@ body::-webkit-scrollbar-thumb:hover {
   }
   #history-list{
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 20rem;
-  padding-left: 20rem;
-  padding-right: 20rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
 }
 .history-slot{
   flex:1;
   height: max-content;
   padding-left: 5rem;
-  width: 1500rem;
+  width: 90%;
   background-color: rgb(255, 244, 210);
   padding: 10rem;
   border-radius: 10rem;
@@ -444,7 +445,7 @@ body::-webkit-scrollbar-thumb:hover {
   font-weight: bold;
 }
 .history-slot:hover .history-click{
-  margin-left: 50rem;
+  margin-left: 90%;
 }
 .history-slot:not(:hover) .history-click{
   transition: margin-left 0.5s 
